@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-23 13:11:29.588685",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "payment_date",
+  "payment_entry_status",
+  "sb_ot_cb_0",
+  "mode_of_payment",
+  "paid_from",
+  "filters_section",
+  "company",
+  "supplier_group",
+  "supplier",
+  "based_on_payment_terms",
+  "fetch_accounts_payable",
+  "column_break_5",
+  "from_due_date",
+  "to_due_date",
+  "max_amount",
+  "min_amount",
+  "supplier_details_section",
+  "payment_details",
+  "sb_total",
+  "hidden_field",
+  "sb_ot_cb_1",
+  "sb_ot_cb_2",
+  "total_amount",
+  "sb_supplier",
+  "suppliers",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "filters_section",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "supplier_group",
+   "fieldtype": "Link",
+   "label": "Supplier Group",
+   "options": "Supplier Group"
+  },
+  {
+   "fieldname": "from_due_date",
+   "fieldtype": "Date",
+   "label": "From Due Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_due_date",
+   "fieldtype": "Date",
+   "label": "To Due Date"
+  },
+  {
+   "description": "Max Outstanding Amount",
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "label": "Max Amount"
+  },
+  {
+   "description": "Min Outstanding Amount",
+   "fieldname": "min_amount",
+   "fieldtype": "Currency",
+   "label": "Min Amount"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "XTC Automated Payment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment and Supplier Details"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Table",
+   "label": "Payment Details",
+   "options": "XTC Automated Payment Detail"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "depends_on": "eval:doc.docstatus==0",
+   "fieldname": "fetch_accounts_payable",
+   "fieldtype": "Button",
+   "label": "Fetch Accounts Payable"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "suppliers",
+   "fieldtype": "Table",
+   "label": "Suppliers",
+   "options": "Request for Quotation Supplier"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "Company:company:default_currency",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sb_total",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sb_ot_cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb_supplier",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hidden_field",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hidden Field"
+  },
+  {
+   "fieldname": "sb_ot_cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "XTCPAY.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "XTCPAY.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "label": "Paid From",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "payment_entry_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Entry Status",
+   "options": "Completed\nPending\nPartially Completed\nClosed",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_ot_cb_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "based_on_payment_terms",
+   "fieldtype": "Check",
+   "label": "Based On Payment Terms"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-16 22:48:08.840785",
+ "modified_by": "Administrator",
+ "module": "XTC",
+ "name": "XTC Automated Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

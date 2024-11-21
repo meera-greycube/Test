@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2023-05-10 14:40:04.189522",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "xtc_automated_payment",
+  "bank_payment_summary_format",
+  "supplier_payment_advice_format",
+  "cb_1_column",
+  "bank_payment_summary_email_template",
+  "supplier_payment_advice_email_template",
+  "email_address_email_bank_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "xtc_automated_payment",
+   "fieldtype": "Section Break",
+   "label": "XTC Automated Payment"
+  },
+  {
+   "fieldname": "bank_payment_summary_format",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bank Payment Summary Print Format",
+   "options": "Print Format",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_payment_advice_format",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier Payment Advice Print  Format",
+   "options": "Print Format",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_1_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_payment_summary_email_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bank Payment Summary Email Template",
+   "options": "Email Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_payment_advice_email_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier Payment Advice Email Template",
+   "options": "Email Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address_email_bank_summary",
+   "fieldtype": "Data",
+   "label": "Email Address for Email Bank summary ",
+   "options": "Email",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-05-10 14:40:04.189522",
+ "modified_by": "Administrator",
+ "module": "XTC",
+ "name": "XTC Payment Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
